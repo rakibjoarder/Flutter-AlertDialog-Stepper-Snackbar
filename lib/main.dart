@@ -2,21 +2,57 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bottom_navaigationbar/stepper.dart';
 void main() => runApp(new MyApp());
 
-class MyApp extends StatelessWidget {
+
+class  MyApp extends StatefulWidget {
+  @override
+  _State createState() => _State();
+}
+
+class _State extends State<MyApp> {
+  int index=0;
+  Widget callPage(int index){
+    switch(index){
+      case 0 : {
+        return HomePage();
+        break;
+      }
+      case 1 : {
+        return Steppers();
+        break;
+      }
+      default:
+        return HomePage();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Snackbar",
+      title: "Material App",
       theme: ThemeData.dark(),
       home: new Scaffold(
         appBar: new AppBar(
-          title: new Text("Snackbar"),
+          title: new Text("Material App"),
         ),
-        body: new HomePage(),
+        body: callPage(index),
+        bottomNavigationBar: BottomNavigationBar(
+
+          currentIndex: index,
+          onTap: (ind){
+
+            index=ind;
+             setState(() {
+
+             });
+          },
+          items: [BottomNavigationBarItem(icon: new Icon(Icons.home),title: Text('Home')),BottomNavigationBarItem(icon: new Icon(Icons.merge_type),title: Text('Stepper'))],
+        ),
       ),
-    );
+    );;
   }
 }
+
+
 
 class HomePage extends StatefulWidget {
   @override

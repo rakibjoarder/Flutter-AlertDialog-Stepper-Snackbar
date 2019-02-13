@@ -34,9 +34,6 @@ class _State extends State<Steppers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: new Text('Stepper'),
-      ),
       body: Stepper(
         steps: _steps(),
         currentStep: _steppercount,
