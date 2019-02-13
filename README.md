@@ -1,6 +1,20 @@
-# flutter_bottom_navaigationbar
+# Flutter-AlertDialog-Stepper-Snackbar
 
-A new Flutter application.
+Flutter AlertDialog,Stepper,Snackbar.
+
+
+<p align="center">
+Screenshot
+</p>
+<p align="center">
+  <img src="image/1.png" width="250"/>
+  <img src="image/2.png" width="250"/>
+  <img src="image/3.png" width="250"/>
+  <img src="image/4.png" width="250"/>
+</p>
+
+
+
 
 ## Getting Started
 
